@@ -18,6 +18,12 @@ ul {
     margin: 0;
     padding: 25px;
 }
+input {
+    position: fixed;
+    margin-top: 15px;
+    margin-left: 17px;
+    font-family: -webkit-body;
+}
 #grid {
     display: grid;
     grid-template-columns: 270px 1fr;
@@ -25,6 +31,8 @@ ul {
 #grid ul {
     padding-left: 40px;
     padding-right: 30px;
+    padding-top: 45px;
+    padding-bottom: 15px;
 }
 #grid #article {
     padding-left: 30px;
@@ -38,5 +46,9 @@ ul {
     }
     h1 {
         border-bottom: none;
+    }
+    input {
+        margin-top: 10px;
+        margin-left: 25px;
     }
 }
