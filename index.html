@@ -18,31 +18,48 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
         <script>
-        function setColor(color){
-        var alist = document.querySelectorAll('a');
-        var i = 0;
-        while(i < alist.length){
-        alist[i].style.color = color;
-        i = i + 1;
+
+
+        var Links = {
+          setColor:function (color){
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+              alist[i].style.color = color;
+              i = i + 1;
+            }
           }
         }
-        function nightDayHandler(self){ 
-        var target = document.querySelector('body');
+
+        var Body = {
+          setColor:function (color){
+            var target = document.querySelector('body');
+            target.style.color = color;
+          },
+          setBackgroundColor:function (color){
+            var target = document.querySelector('body');
+            target.style.backgroundColor = color;
+          }
+        }
+
+
+       function nightDayHandler(self){ 
+
         if(self.value === 'night'){
-        target.style.backgroundColor = 'black';
-        target.style.color = 'white';
-        self.value = 'day';
+          Body.setBackgroundColor('black');
+          Body.setColor('white');
+          self.value = 'day';
 
-        setColor('white');
-    } else {
-        target.style.backgroundColor = 'white';
-        target.style.color = 'black';
-        self.value = 'night';
+          Links.setColor('white');
+        } else {
+          Body.setBackgroundColor('white');
+          Body.setColor('black');
+          self.value = 'night';
 
-        setColor('black');
+          Links.setColor('black');
+        }
       }
-    }
-    </script>
+     </script>
     </head>
     <body>
         <h1>
