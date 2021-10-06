@@ -5,8 +5,14 @@
         <script
             async="async"
             src="https://www.googletagmanager.com/gtag/js?id=G-EKNN9YVF78"></script>
-        <script src="window.js">
+        <script>
             window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'G-EKNN9YVF78');
         </script>
         <title>WEB1 - Nnconscious</title>
         <meta charset="utf-8">
@@ -17,7 +23,10 @@
         <h1>
             <a href="index.html">INTJ</a>
         </h1>
-        <input type="button" value="night" onclick=" 
+        <input
+            type="button"
+            value="night"
+            onclick="
         nightDayHandler(this);
         ">
         <div id="grid">
